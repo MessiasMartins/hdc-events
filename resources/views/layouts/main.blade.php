@@ -27,7 +27,7 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a href="/" class="nav-link">Criar Eventos</a>
+                        <a href="/events/create" class="nav-link">Criar Eventos</a>
                     </li>
                     
                     <li class="nav-item">
@@ -48,7 +48,8 @@
         <p>HDC Events &copy; 2020</p>
     </footer>
 
-
+    <!-- Ionicons -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Bootstrap JS -->
