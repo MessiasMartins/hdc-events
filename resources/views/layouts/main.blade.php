@@ -41,8 +41,26 @@
             </div>
         </nav>
     </header>
-
-    @yield('content')
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                @if(session('msg'))
+                    <div class="toast" id="myToast" style="position: absolute; top: 1%; right: 1%; z-index: 999;">
+                        <div class="toast-header bg-success text-white">
+                            <strong class="mr-auto"><ion-icon name="checkmark-outline"></ion-icon> Sucesso</strong>
+                            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="toast-body">
+                            <div>{{ session('msg') }}</div>
+                        </div>
+                    </div>
+                @endif
+                @yield('content')
+            </div>
+        </div>
+    </main>
     
     <footer>
         <p>HDC Events &copy; 2020</p>
@@ -50,10 +68,12 @@
 
     <!-- Ionicons -->
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <!-- Javascript -->
     <script src="/js/scripts.js"></script>
 </body>
