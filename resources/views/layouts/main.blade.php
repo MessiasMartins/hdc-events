@@ -18,35 +18,38 @@
 </head>
 <body>
     <!-- Menu -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nv">
-        <a class="navbar-brand" href="/">
-            <img src="/img/hdcevents_logo.svg" width="30" height="30" alt="HDC Events">
-        </a>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nv">
+            <a class="navbar-brand" href="/">
+                <img src="/img/hdcevents_logo.svg" width="30" height="30" alt="HDC Events">
+            </a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbar">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a href="/" class="nav-link">Eventos <span class="sr-only">(current)</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a href="/events/create" class="nav-link">Criar Eventos</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a href="/" class="nav-link">Entrar</a>
-                </li>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Eventos <span class="sr-only">(current)</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="/events/create" class="nav-link">Criar Eventos</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Entrar</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a href="/" class="nav-link">Cadastrar</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Cadastrar</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
 
     <main>
         <div class="container-fluid">
