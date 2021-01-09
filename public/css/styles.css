@@ -113,6 +113,10 @@ h1, h2, h3, h4, h5 {
   color: #757575;
 }
 
+.event-owner {
+  color: #757575;
+}
+
 .events-participants {
   margin-top: -10px;
   font-size: 14px;
