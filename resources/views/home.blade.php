@@ -33,7 +33,7 @@
                                 <p class="card-date">{{ date('d/m/Y', strtotime($event->date)) }}</p>
                                 <h5 class="card-title">{{ $event->title }}</h5>
                                 <p class="event-city"><ion-icon name="location-outline"></ion-icon>{{$event->city}}</p>
-                                <p class="events-participants"><ion-icon name="people-outline"></ion-icon>X Participantes</p>
+                                <p class="events-participants"><ion-icon name="people-outline"></ion-icon>{{ count($event->users) }} Participantes</p>
                                 <a href="/events/{{ $event->id }}" class="btn btn-primary btn-block">Saber mais</a>
                             </div>
                         </div>
