@@ -13,14 +13,27 @@
             <p class="event-city"><ion-icon name="location-outline"></ion-icon> {{ $event->city }}</p>
             <p class="events-participants"><ion-icon name="people-outline"></ion-icon> @if(count($event->users) == 0) Nenhum participante @elseif(count($event->users) == 1) {{ count($event->users) }} participante @else {{ count($event->users) }} participantes @endif </p>
             <p class="event-owner"><ion-icon name="star-outline"></ion-icon> {{ ucfirst($eventOwner['name']) }}</p>
-            <form action="/events/join/{{ $event->id }}" method="POST">
-                @csrf
-                <a href="/events/join/{{ $event->id }}" class="btn btn-primary" id="event-submit" onclick="event.preventDefault();this.closest('form').submit();">
-                    Confirmar Presença
-                </a>
-            </form>
+            
+            @auth
+                @if(!$hasUserJoined)
+                    <form action="/events/join/{{ $event->id }}" method="POST">
+                        @csrf
+                        <a href="/events/join/{{ $event->id }}" 
+                        class="btn btn-primary" 
+                        id="event-submit"
+                        onclick="event.preventDefault();
+                        this.closest('form').submit();">
+                        Confirmar Presença
+                        </a>
+                    </form>
+                @else
+                    <p class="alert alert-success mt-2">Você já está participando deste evento!</p>
+                @endif
+            @endauth
+
+
             @if($event->items)
-                <h3>O evento conta com:</h3>
+                <h3 class="mt-3">O evento conta com:</h3>
                 <ul id="items-list">
                     @foreach($event->items as $item)
                         <li><ion-icon name="play-outline"></ion-icon> <span>{{ $item }}</span></li>
