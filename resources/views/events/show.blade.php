@@ -11,7 +11,7 @@
         <div id="info-container" class="col-md-6">
             <h1>{{ $event->title }}</h1>
             <p class="event-city"><ion-icon name="location-outline"></ion-icon> {{ $event->city }}</p>
-            <p class="events-participants"><ion-icon name="people-outline"></ion-icon> {{ count($event->users) }} Participantes</p>
+            <p class="events-participants"><ion-icon name="people-outline"></ion-icon> @if(count($event->users) == 0) Nenhum participante @elseif(count($event->users) == 1) {{ count($event->users) }} participante @else {{ count($event->users) }} participantes @endif </p>
             <p class="event-owner"><ion-icon name="star-outline"></ion-icon> {{ ucfirst($eventOwner['name']) }}</p>
             <form action="/events/join/{{ $event->id }}" method="POST">
                 @csrf
